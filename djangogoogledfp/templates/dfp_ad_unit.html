@@ -1,0 +1,12 @@
+{% if ACCOUNT_ID %}
+<div id="{{ DISPLAY_ELEMENT_ID }}" style="height:{{ HEIGHT_PX }}px; width:{{ WIDTH_PX }};"></div>
+<script>
+    googletag.cmd.push(function() {
+        googletag.pubads().display("/{{ ACCOUNT_ID }}/{{ AD_UNIT_NAME}}",
+                [{{ WIDTH}}, {{HEIGHT}}],
+    "{{ DISPLAY_ELEMENT_ID }}");
+    })
+</script>
+        {% else %}
+        <!-- DFP Ad Unit could not be displayed because the Google DFP account id was not set -->
+{% endif %}
