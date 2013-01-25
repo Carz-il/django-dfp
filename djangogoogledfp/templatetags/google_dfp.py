@@ -22,7 +22,7 @@ def dfp_ad_unit(name, width_in_px, height_in_px):
     :rtype : dict
     """
     unique_element_id = "%s_%sX%s_%s" % (name, width_in_px, height_in_px, str(uuid.uuid1()))
-    dfp_account_id = getattr(django_settings, 'GOOGLE_DFP_ACCOUNT_ID')
+    dfp_account_id = getattr(django_settings, 'GOOGLE_DFP_ACCOUNT_ID', None)
 
     return {'ACCOUNT_ID': dfp_account_id,
             'AD_UNIT_NAME': name,
