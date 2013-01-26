@@ -5,7 +5,7 @@ import uuid
 
 register = template.Library()
 
-@register.inclusion_tag('dfp_init_script.html')
+@register.inclusion_tag('djangogoogledfp/dfp_init_script.html')
 def google_dfp_init_script():
     """
     Generates the required JS for displaying google dfp ad units
@@ -14,7 +14,7 @@ def google_dfp_init_script():
     return {'SCRIPT_URL': settings.DFP_INIT_SCRIPT_URL}
 
 
-@register.inclusion_tag("dfp_ad_unit.html")
+@register.inclusion_tag("djangogoogledfp/dfp_ad_unit.html")
 def dfp_ad_unit(name, width_in_px, height_in_px, css_class=None):
     """
     Generates the required HTML + JS to display the given ad unit
