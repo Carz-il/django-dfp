@@ -1,5 +1,5 @@
 {% if ACCOUNT_ID %}
-<div id="{{ DISPLAY_ELEMENT_ID }}" style="height:{{ HEIGHT_PX }}px; width:{{ WIDTH_PX }}px;"></div>
+<div id="{{ DISPLAY_ELEMENT_ID }}" style="height:{{ HEIGHT_PX }}px; width:{{ WIDTH_PX }}px;" {% if CSS_CLASS %}class="{{CSS_CLASS}}"{% endif %}></div>
 <script>
     googletag.cmd.push(function() {
         googletag.pubads().display("/{{ ACCOUNT_ID }}/{{ AD_UNIT_NAME}}",
