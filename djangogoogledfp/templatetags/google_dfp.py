@@ -15,7 +15,7 @@ def google_dfp_init_script():
 
 
 @register.inclusion_tag("dfp_ad_unit.html")
-def dfp_ad_unit(name, width_in_px, height_in_px, css_class):
+def dfp_ad_unit(name, width_in_px, height_in_px, css_class=None):
     """
     Generates the required HTML + JS to display the given ad unit
 
