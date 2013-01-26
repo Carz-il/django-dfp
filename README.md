@@ -42,6 +42,11 @@ Than, you can put your ad:
 
 {% dfp_ad_unit "MY_AD250x250" 250 250 %}
 
+you can add classes to you add:
+
+{% dfp_ad_unit "MY_AD250x250" 250 250 "myclass1 myclass2" %}
+
+
 .....
 ```
 
